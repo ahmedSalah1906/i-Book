@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project js</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="/home.css">
+    <link rel="stylesheet" href="/feature.css">
+    <script src="https://kit.fontawesome.com/84109248b4.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-1">
+            <a href=" home.html" class="logo"><i class="fa-solid fa-book"></i>I-Book</a>
+            <form action="" class="search-form">
+
+                <input type="search" name="" placeholder="search here....." id="search-box">
+                <label for="search-box" class="fa-solid fa-magnifying-glass"> </label>
+
+            </form>
+            <div class="icons">
+                <div id="search-btn" class="fa-solid fa-magnifying-glass"></div>
+                <a href=" payment-review.html" class="fa-solid fa-cart-shopping" id="cart-icon"><span
+                        id="cart-count">0</span></a>
+                <a href="#" class="fa-solid fa-heart"></a>
+                <div id="login-btn" class="fa-solid fa-user"><span id="username-display"
+                        style="display:none; margin-left: 10px;"></span></div>
+            </div>
+
+        </div>
+        <div class="header-2">
+            <nav class="navbar">
+                <a href=" home.html">Home</a>
+                <a href=" featured.html">Featured</a>
+                <a href=" arrivals.html">Arravails</a>
+                <a href=" reviews.html">Reviwes</a>
+                <a href=" blogs.html">Blogs</a>
+
+            </nav>
+        </div>
+
+
+
+
+    </header>
+
+    <nav class="bottom-navbar">
+        <a href=" home.html" class="fa-solid fa-house"></a>
+        <a href=" featured.html" class="fa-solid fa-list"></a>
+        <a href=" arrivals.html" class="fa-solid fa-tag"></a>
+        <a href=" reviews.html" class="fa-solid fa-comment"></a>
+        <a href=" contact.html" class="fa-solid fa-blog"></a>
+    </nav>
+    <div class="login-form-container">
+        <div id="close-login-btn" class="fa-solid fa-times"></div>
+
+
+        <form onsubmit="submitForm(event)">
+            <h3>Sign In</h3>
+            <span>Username</span>
+            <input type="email" class="box" id="username" placeholder="Enter your email" autocomplete="username"
+                required>
+            <span>Password</span>
+            <input type="password" class="box" id="password" placeholder="Enter your password"
+                autocomplete="current-password" required>
+            <div class="checkbox">
+                <input type="checkbox" id="remember-me">
+                <label for="remember-me">Remember me</label>
+            </div>
+            <input type="submit" value="Sign In" class="btn">
+            <p>Forgot your password? <a href="#">Click here</a></p>
+            <p>Don't have an account? <a href=" registration.html">Create one</a></p>
+        </form>
+
+    </div>
+    <section id="featured" class="icons-container">
+        <div class="box-cont">
+            <div class="book-stye">
+                <img src="/images/image3.jpg" alt="Product" class="img-responsive" />
+
+
+
+
+                <p><strong>Featured Book </strong></p>
+
+
+                <h3>Book Title</h3>
+
+
+                <p>Description Product tell me how to change playlist height size like 600px in html5 player. player
+                    good work now check this link</p>
+
+                <div class="content">
+
+                    <div class="price">$17.99</div>
+                    <a href="#" onclick="addToCart('2')" class="btn">Add to Cart</a>
+                </div>
+            </div>
+
+
+            <div class="book-stye">
+                <img src="./images/image12.jpg" alt="Product" class="img-responsive" />
+
+
+
+
+                <p><strong>Featured Book </strong></p>
+
+
+                <h3>Book Title</h3>
+
+
+                <p>Description Product tell me how to change playlist height size like 600px in html5 player. player
+                    good work now check this link</p>
+
+                <div class="content">
+
+                    <div class="price">$17.99</div>
+                    <a href="#" onclick="addToCart('11')" class="btn">Add to Cart</a>
+                </div>
+            </div>
+            <div class="book-stye">
+                <img src="./images/image11.jpg" alt="Product" class="img-responsive" />
+
+
+
+
+                <p><strong>Featured Book </strong></p>
+
+
+                <h3>Book Title</h3>
+
+
+                <p>Description Product tell me how to change playlist height size like 600px in html5 player. player
+                    good work now check this link</p>
+
+                <div class="content">
+
+                    <div class="price">$17.99</div>
+                    <a href="#" onclick="addToCart('11')" class="btn">Add to Cart</a>
+                </div>
+            </div>
+            <div class="book-stye">
+                <img src="./images/image9.jpg" alt="Product" class="img-responsive" />
+
+
+
+
+                <p><strong>Featured Book </strong></p>
+
+
+                <h3>Book Title</h3>
+
+
+                <p>Description Product tell me how to change playlist height size like 600px in html5 player. player
+                    good work now check this link</p>
+
+                <div class="content">
+
+                    <div class="price">$17.99</div>
+                    <a href="#" onclick="addToCart('8')" class="btn">Add to Cart</a>
+                </div>
+            </div>
+            <div class="book-stye">
+                <img src="./images/image7 .jpg" alt="Product" class="img-responsive" />
+
+
+
+
+                <p><strong>Featured Book </strong></p>
+
+
+                <h3>Book Title</h3>
+
+
+                <p>Description Product tell me how to change playlist height size like 600px in html5 player. player
+                    good work now check this link</p>
+
+                <div class="content">
+
+                    <div class="price">$17.99</div>
+                    <a href="#" onclick="addToCart('6')" class="btn">Add to Cart</a>
+                </div>
+            </div>
+            <div class="book-stye">
+                <img src="./images/image4.jpg" alt="Product" class="img-responsive" />
+
+
+
+
+                <p><strong>Featured Book </strong></p>
+
+
+                <h3>Book Title</h3>
+
+
+                <p>Description Product tell me how to change playlist height size like 600px in html5 player. player
+                    good work now check this link</p>
+
+                <div class="content">
+
+                    <div class="price">$17.99</div>
+                    <a href="#" onclick="addToCart('3')" class="btn">Add to Cart</a>
+                </div>
+            </div>
+            <div class="book-stye">
+                <img src="./images/image8.jpg" alt="Product" class="img-responsive" />
+
+
+
+
+                <p><strong>Featured Book </strong></p>
+
+
+                <h3>Book Title</h3>
+
+
+                <p>Description Product tell me how to change playlist height size like 600px in html5 player. player
+                    good work now check this link</p>
+
+                <div class="content">
+
+                    <div class="price">$17.99</div>
+                    <a href="#" onclick="addToCart('7')" class="btn">Add to Cart</a>
+                </div>
+            </div>
+            <div class="book-stye">
+                <img src="./images/image7 .jpg" alt="Product" class="img-responsive" />
+
+
+
+
+                <p><strong>Featured Book </strong></p>
+
+
+                <h3>Book Title</h3>
+
+
+                <p>Description Product tell me how to change playlist height size like 600px in html5 player. player
+                    good work now check this link</p>
+
+                <div class="content">
+
+                    <div class="price">$17.99</div>
+                    <a href="#" onclick="addToCart('6')" class="btn">Add to Cart</a>
+                </div>
+            </div>
+
+
+
+
+        </div>
+        
+    
+    </section>
+    <footer class="footer">
+        <div class="container">
+          <p>Copyright &copy; 2024 made by ahmed Salah</p>
+          <p>Contact Us:</p>
+          <ul>
+            <li>
+              <a href="#">ahmedsalah.ss.2255@gmail.com</a>
+            </li>
+            <li><a href="tel:+1234567890">01016766978</a></li>
+            <li>
+              <a href="#" target="_blank">Facebook</a>
+            </li>
+            <li>
+              <a href="#" target="_blank">Instagram</a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/demo1.js"></script>
+    
+</body>
+
+</html>

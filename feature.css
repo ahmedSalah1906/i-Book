@@ -1,0 +1,51 @@
+
+body{
+    text-align: center;
+    background: url(/images/pexels-hngstrm-1939485.jpg) no-repeat;
+}
+.box-cont {
+    align-items: center;
+    margin: 20px;
+    padding: 10px;
+}
+.book-stye{
+    display: inline-block;
+    width: 20%;
+    text-align: center;
+    margin: 5px;
+   padding: 5px;
+    border: 1px solid #212121;
+    height: 480px;
+    border-radius: 5px;
+    
+}
+.book-stye a{
+    height: 25px;
+    
+    font-size: 1.2rem;
+}
+.book-stye img{
+    display: block;
+    width: 90%;
+    height: 300px;
+    max-width: 150px;
+    max-height: 300px;
+    overflow: hidden;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 10px;
+    margin: 0 auto;
+    border-radius: 5px;
+
+}
+.book-stye p{
+    margin: 7px;
+    font-size: 1.2rem;
+    
+}
+.book-stye h3{
+    margin: 7px;
+
+}
+
+

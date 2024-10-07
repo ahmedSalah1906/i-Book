@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="/home.css">
+    <link rel="stylesheet" href="/registration.css">
+    
+    <script
+    src="https://kit.fontawesome.com/84109248b4.js"
+    crossorigin="anonymous"
+  ></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-1">
+          <a href="home.html" class="logo"><i class="fa-solid fa-book"></i>I-Book</a>
+          <form action="" class="search-form">
+            <input
+              type="search"
+              name=""
+              placeholder="search here....."
+              id="search-box"
+            />
+            <label for="search-box" class="fa-solid fa-magnifying-glass"> </label>
+          </form>
+          <div class="icons">
+            <div id="search-btn" class="fa-solid fa-magnifying-glass"></div>
+            <a
+              href=" payment-review.html"
+              class="fa-solid fa-cart-shopping"
+              id="cart-icon"
+              ><span id="cart-count">0</span></a
+            >
+            <a href="#" class="fa-solid fa-heart"></a>
+            <div id="login-btn" class="fa-solid fa-user">
+              <span
+                id="username-display"
+                style="display: none; margin-left: 10px"
+              ></span>
+            </div>
+          </div>
+        </div>
+        <div class="header-2">
+          <nav class="navbar">
+            <a href=" home.html">Home</a>
+            <a href=" featured.html">Featured</a>
+            <a href=" arrivals.html">Arravails</a>
+            <a href=" reviews.html">Reviwes</a>
+            <a href=" blogs.html">Blogs</a>
+          </nav>
+        </div>
+      </header>
+  
+      <nav class="bottom-navbar">
+        <a href=" home.html" class="fa-solid fa-house"></a>
+        <a href=" featured.html" class="fa-solid fa-list"></a>
+        <a href=" arrivals.html" class="fa-solid fa-tag"></a>
+        <a href=" reviews.html" class="fa-solid fa-comment"></a>
+        <a href=" blogs.html" class="fa-solid fa-blog"></a>
+      </nav>
+      <div class="login-form-container">
+        <div id="close-login-btn" class="fa-solid fa-times"></div>
+  <section class="regist" id="regist">
+        <form onsubmit="submitForm(event)">
+          <h3>logIn</h3>
+          <span>Username</span>
+          <input
+            type="email"
+            class="box"
+            id="username"
+            placeholder="Enter your email"
+            autocomplete="username"
+            required
+          />
+          <span>Password</span>
+          <input
+            type="password"
+            class="box"
+            id="password"
+            placeholder="Enter your password"
+            autocomplete="current-password"
+            required
+          />
+          <div class="checkbox">
+            <input type="checkbox" id="remember-me" />
+            <label for="remember-me">Remember me</label>
+          </div>
+          <input type="submit" value="Sign In" class="btn" />
+          <p>Forgot your password? <a href="#">Click here</a></p>
+          <p>Don't have an account? <a href=" registration.html">Create one</a></p>
+        </form>
+      </div>
+      
+      <section class="regist" id="regist">
+        <div class="registration-form-container">
+            <form id="registration-form" onsubmit="submitRegistrationForm(event)">
+                <h2>Register</h2>
+                <input type="text" id="reg-username" placeholder="Enter your username" required>
+                <span id="username-error" class="error-message"></span>
+                <input type="email" id="reg-email" placeholder="Enter your email" required>
+                <span id="email-error" class="error-message"></span>
+                <input type="password" id="reg-password" placeholder="Enter your password" required>
+                <span id="password-error" class="error-message"></span>
+                <input type="password" id="reg-confirm-password" placeholder="Confirm your password" required>
+                <span id="confirm-password-error" class="error-message"></span>
+                <button type="submit" class="btn">Register</button>
+            </form>
+        </div>
+    </section>
+      
+
+
+    
+
+    <script src="/demo1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+</html>

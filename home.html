@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>project js</title>
+    <link rel="stylesheet" href="/feature.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/home.css" />
+    <script
+      src="https://kit.fontawesome.com/84109248b4.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-1">
+        <a href=" home.html"
+         class="logo"><i class="fa-solid fa-book"></i>I-Book</a>
+        <form action="" class="search-form">
+          <input
+            type="search"
+            name=""
+            placeholder="search here....."
+            id="search-box"
+          />
+          <label for="search-box" class="fa-solid fa-magnifying-glass"> </label>
+        </form>
+        <div class="icons">
+          <div id="search-btn" class="fa-solid fa-magnifying-glass"></div>
+          <a
+            href=" payment-review.html"
+            class="fa-solid fa-cart-shopping"
+            id="cart-icon"
+            ><span id="cart-count">0</span></a
+          >
+          <a href="#" class="fa-solid fa-heart"></a>
+          <div id="login-btn" class="fa-solid fa-user">
+            <span
+              id="username-display"
+              style="display: none; margin-left: 10px"
+            ></span>
+          </div>
+        </div>
+      </div>
+      <div class="header-2">
+        <nav class="navbar">
+          <a href=" home.html">Home</a>
+          <a href=" featured.html">Featured</a>
+          <a href=" arrivals.html">Arravails</a>
+          <a href=" reviews.html">Reviwes</a>
+          <a href=" blogs.html">Blogs</a>
+        </nav>
+      </div>
+    </header>
+
+    <nav class="bottom-navbar">
+      <a href=" home.html" class="fa-solid fa-house"></a>
+      <a href=" featured.html" class="fa-solid fa-list"></a>
+      <a href=" arrivals.html" class="fa-solid fa-tag"></a>
+      <a href=" reviews.html" class="fa-solid fa-comment"></a>
+      <a href=" blogs.html" class="fa-solid fa-blog"></a>
+    </nav>
+    <div class="login-form-container">
+      <div id="close-login-btn" class="fa-solid fa-times"></div>
+
+      <form onsubmit="submitForm(event)">
+        <h3>logIn</h3>
+        <span>Username</span>
+        <input
+          type="email"
+          class="box"
+          id="username"
+          placeholder="Enter your email"
+          autocomplete="username"
+          required
+        />
+        <span>Password</span>
+        <input
+          type="password"
+          class="box"
+          id="password"
+          placeholder="Enter your password"
+          autocomplete="current-password"
+          required
+        />
+        <div class="checkbox">
+          <input type="checkbox" id="remember-me" />
+          <label for="remember-me">Remember me</label>
+        </div>
+        <input type="submit" value="Sign In" class="btn" />
+        <p>Forgot your password? <a href="#">Click here</a></p>
+        <p>Don't have an account? <a href=" registration.html">Create one</a></p>
+      </form>
+    </div>
+    <section id="home" class="home">
+    
+      <div class="row">
+        <div class="content">
+          <h3>up to 40%</h3>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus
+            autem vel consequuntur nisi suscipit officiis molestiae, voluptatem
+            vero officia facere fuga praesentium eveniet sed repellat
+            accusantium optio odio placeat deserunt debitis voluptas
+            repellendus! Ut error ratione natus commodi placeat. Quia minus sunt
+            itaque laborum? Voluptatibus, blanditiis! Deserunt sapiente suscipit
+            aliquid.ipsum dolor sit, amet consectetur adipisicing elit.
+            Quisquam, quaerat.
+          </p>
+          <a href=" allBooks.html" class="btn">shop now</a>
+        </div>
+
+        <div class="swiper books-slider">
+          <div class="swiper-wrapper">
+            <a
+              href="#"
+              class="swiper-slide"
+              onclick="openBookDetails('0')"
+              ><img src="./images/image1.jpg" alt=""
+            /></a>
+            <a
+              href="#"
+              class="swiper-slide"
+              onclick="openBookDetails('1')"
+              ><img src="./images/image2.jpg" alt=""
+            /></a>
+            <a
+              href="#"
+              class="swiper-slide"
+              onclick="openBookDetails('2')"
+              ><img src="./images/image3.jpg" alt=""
+            /></a>
+            <a
+              href="#"
+              class="swiper-slide"
+              onclick="openBookDetails('3')"
+              ><img src="./images/image4.jpg" alt=""
+            /></a>
+            <a
+              href="#"
+              class="swiper-slide"
+              onclick="openBookDetails('4')"
+              ><img src="./images/image5.jpg" alt=""
+            /></a>
+            <a
+              href="#"
+              class="swiper-slide"
+              onclick="openBookDetails('5')"
+              ><img src="./images/image6.jpg" alt=""
+            /></a>
+            <a
+              href="#"
+              class="swiper-slide"
+              onclick="openBookDetails('6')"
+              ><img src="./images/image7 .jpg" alt=""
+            /></a>
+            <a
+              href="#"
+              class="swiper-slide"
+              onclick="openBookDetails('7')"
+              ><img src="./images/image8.jpg" alt=""
+            /></a>
+          </div>
+
+          <img src="./images/stand.jpg" alt="" class="stand" />
+        </div>
+      </div>
+    </section>
+
+    <section class="book-details" id="book-details">
+        <div class="product__photo">
+            <div class="photo-container">
+                <div class="photo-main">
+                    <div class="product__info">
+                        <div class="title"> 
+                            <h2 id="book-title"></h2>
+                            <h3 id="book-author"></h3>
+                            <p id="book-description"></p>
+                            <span id="book-price"></span>
+                           
+                            <span>COD: 45999</span>
+                        </div>
+                        <div class="price">
+                            R$ <span></span>
+                        </div>
+                        <div class="buttons">
+                            <button class="btn" onclick="addToCart('1')">Add to Cart</button> 
+                            <button class="btn" onclick="closeBookDetails()">back to shop</button>                           
+                        </div>
+
+                   
+                    <img id="book-image" src="" alt="Book Image" />
+                </div>
+                </div>
+                </div>
+                
+                    
+                
+    </section>
+    <section id="all-books" class="all-books">
+
+        <div class="box-cont">
+            <div class="book-stye">
+                <a href="#" onclick="openBookDetails(2)">
+                <img src="/images/image3.jpg" alt="Product" class="img-responsive" /></a>
+    
+    
+    
+    
+                <p><strong>Featured Book </strong></p>
+    
+    
+                <h3>Book Title</h3>
+    
+    
+                <p>Description Product tell me how to change playlist height size like 600px in html5 player. player
+                    good work now check this link</p>
+    
+                <div class="content">
+    
+                    
+                    <a href="#" onclick="addToCart('2')" class="btn">Add to Cart</a>
+                </div>
+            </div>
+    
+    
+            <div class="book-stye">
+                <a href="#" onclick="openBookDetails('11')">
+                    <img src="./images/image12.jpg" alt="Product" class="img-responsive" /></a>
+    
+    
+    
+    
+                <p><strong>Featured Book </strong></p>
+    
+    
+                <h3>Book Title</h3>
+    
+    
+                <p>Description Product tell me how to change playlist height size like 600px in html5 player. player
+                    good work now check this link</p>
+    
+                <div class="content">
+    
+                    <a href="#" onclick="addToCart('11')" class="btn">Add to Cart</a>
+                </div>
+            </div>
+            <div class="book-stye">
+                <a href="#" onclick="openBookDetails('10')">
+                <img src="./images/image11.jpg" alt="Product" class="img-responsive" /></a>
+    
+                <p><strong>Featured Book </strong></p>
+        
+                <h3>Book Title</h3>
+    
+                <p>Description Product tell me how to change playlist height size like 600px in html5 player. player
+                    good work now check this link</p>
+
+                <div class="content">
+    
+                  
+                    <a href="#" onclick="addToCart('10')" class="btn">Add to Cart</a>
+                </div>
+
+        </div>
+        <div class="book-stye">
+            <a href="#" onclick="openBookDetails('6')">
+            <img src="./images/image7 .jpg" alt="Product" class="img-responsive" /></a>
+
+            <p><strong>Featured Book </strong></p>
+            <h3>Book Title</h3>
+            <p>Description Product tell me how to change playlist height size like 600px in html5 player. player
+                good work now check this link</p>
+
+            <div class="content">
+                <div class="price">$17.99</div>
+                <a href="#" onclick="addToCart('6')" class="btn">Add to Cart</a>
+            </div>
+        </div>
+        <div class="book-stye">
+            <a href="#" onclick="openBookDetails('3')">
+            <img src="./images/image4.jpg" alt="Product" class="img-responsive" /></a>
+
+            <p><strong>Featured Book </strong></p>
+
+            <h3>Book Title</h3>
+
+            <p>Description Product tell me how to change playlist height size like 600px in html5 player. player
+                good work now check this link</p>
+            <div class="content">
+                
+                <a href="#" onclick="addToCart('3')" class="btn">Add to Cart</a>
+            </div>
+        </div>
+        <div class="book-stye">
+            <a href="#" onclick="openBookDetails('7')">
+            <img src="./images/image8.jpg" alt="Product" class="img-responsive" /></a>
+
+
+
+
+            <p><strong>Featured Book </strong></p>
+
+
+            <h3>Book Title</h3>
+
+
+            <p>Description Product tell me how to change playlist height size like 600px in html5 player. player
+                good work now check this link</p>
+
+            <div class="content">
+
+              
+                <a href="#" onclick="addToCart('7')" class="btn">Add to Cart</a>
+            </div>
+        </div>
+        <div class="book-stye">
+            <a href="#" onclick="openBookDetails('6')">
+            <img src="./images/image7 .jpg" alt="Product" class="img-responsive" /></a>
+
+
+
+
+            <p><strong>Featured Book </strong></p>
+
+
+            <h3>Book Title</h3>
+
+
+            <p>Description Product tell me how to change playlist height size like 600px in html5 player. player
+                good work now check this link</p>
+
+            <div class="content">
+
+                
+                <a href="#" onclick="addToCart('6')" class="btn">Add to Cart</a>
+            </div>
+        </div>
+        <div class="book-cont">
+            <div class="book-stye">
+                <a href="#" onclick="openBookDetails('2')">
+                <img src="/images/image3.jpg" alt="Product" class="img-responsive" /></a>
+
+
+                <p><strong>arrivals Book</strong></p>
+
+
+                <h3>Book Title</h3>
+
+
+                <p>Description Product tell me how to change playlist height size like 600px in html5 player. player
+                    good work now check this link</p>
+
+                <div class="content">
+
+                    <a href="#" onclick="addToCart('2')" class="btn">Add to Cart</a>
+                </div>
+            </div>
+        
+            <div class="book-stye">
+                <a href="#" onclick="openBookDetails('13')">
+                <img src="/images/image14.jpg" alt="Product" class="img-responsive" /></a>
+
+
+                <p><strong>arrivals Book</strong></p>
+
+
+                <h3>Book Title</h3>
+
+
+                <p>Description Product tell me how to change playlist height size like 600px in html5 player. player
+                    good work now check this link</p>
+
+                <div class="content">
+
+                  
+                    <a href="#" onclick="addToCart('13')" class="btn">Add to Cart</a>
+                </div>
+            </div>
+     
+            <div class="book-stye">
+                <a href="#" onclick="openBookDetails('14')">
+
+                
+                <img src="/images/image15.jpg" alt="Product" class="img-responsive" /></a>
+
+
+                <p><strong>arrivals Book</strong></p>
+
+
+                <h3>Book Title</h3>
+
+
+                <p>Description Product tell me how to change playlist height size like 600px in html5 player. player
+                    good work now check this link</p>
+
+                <div class="content">
+
+                    
+                    <a href="#" onclick="addToCart('14')" class="btn">Add to Cart</a>
+                </div>
+            </div>
+        
+            <div class="book-stye">
+                <a href="#" onclick="openBookDetails( '15')">
+
+                
+                <img src="/images/image16.jpg" alt="Product" class="img-responsive" /></a>
+
+
+                <p><strong>arrivals Book</strong></p>
+
+
+                <h3>Book Title</h3>
+
+
+                <p>Description Product tell me how to change playlist height size like 600px in html5 player. player
+                    good work now check this link</p>
+
+                <div class="content">
+
+                   
+                    <a href="#" onclick="addToCart('15')" class="btn">Add to Cart</a>
+                </div>
+            </div>
+        
+            <div class="book-stye">
+                <a href="#" onclick="openBookDetails('16')">
+
+
+                <img src="/images/image17.jpg" alt="Product" class="img-responsive" /> </a>
+
+
+                <p><strong>arrivals Book </strong></p>
+
+
+                <h3>Book Title</h3>
+
+
+                <p>Description Product tell me how to change playlist height size like 600px in html5 player. player
+                    good work now check this link</p>
+
+                <div class="content">
+
+                    
+                    <a href="#" onclick="addToCart('16')" class="btn">Add to Cart</a>
+                </div>
+            </div>
+        
+            <div class="book-stye">
+                <a href="#" onclick="openBookDetails('10')">
+                    <img src="/images/image11.jpg" alt="Product" class="img-responsive" />
+                </a>
+                
+
+
+                <p><strong>arrivals Book </strong></p>
+
+
+                <h3>Book Title</h3>
+
+
+                <p>Description Product tell me how to change playlist height size like 600px in html5 player. player
+                    good work now check this link</p>
+
+                <div class="content">
+
+                  
+                    <a href="#" onclick="addToCart('10')" class="btn">Add to Cart</a>
+                </div>
+            </div>
+        
+            <div class="book-stye">
+                <a href="#" onclick="openBookDetails('12')">
+
+                
+                <img src="/images/image13.jpg" alt="Product" class="img-responsive" /></a>
+
+
+                <p><strong>arrivals Book</strong></p>
+
+
+                <h3>Book Title</h3>
+
+
+                <p>Description Product tell me how to change playlist height size like 600px in html5 player. player
+                    good work now check this link</p>
+
+                <div class="content">
+
+                    
+                    <a href="#" onclick="addToCart('12')" class="btn">Add to Cart</a>
+                </div>
+            </div>
+        
+            <div class="book-stye">
+                <a href="#" onclick="openBookDetails('9')">
+                <img src="/images/image10.jpg" alt="Product" class="img-responsive" /></a>
+
+
+                <p><strong >arrivals Book</strong></p>
+
+
+                <h3 id="book-title">Book Title</h3>
+                <h3 id="book-author">Author</h3>
+
+
+                <p id="book-description">Description Product tell me how to change playlist height size like 600px in html5 player. player
+                    good work now check this link</p>
+
+                <div class="content">
+
+                   
+                    <a href="#" onclick="addToCart('9')" class="btn">Add to Cart</a>
+                </div>
+</div>
+    </div>
+
+    </section>
+    <footer class="footer">
+        <div class="container">
+          <p>Copyright &copy; 2024 made by ahmed Salah</p>
+          <p>Contact Us:</p>
+          <ul>
+            <li>
+              <a href="#">ahmedsalah.ss.2255@gmail.com</a>
+            </li>
+            <li><a href="tel:+1234567890">01016766978</a></li>
+            <li>
+              <a href="#" target="_blank">Facebook</a>
+            </li>
+            <li>
+              <a href="#" target="_blank">Instagram</a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/demo1.js"></script>
+  </body>
+</html>
